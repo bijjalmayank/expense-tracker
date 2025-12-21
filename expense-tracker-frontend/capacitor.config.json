@@ -1,0 +1,9 @@
+{
+  "appId": "com.mayank.expensetracker",
+  "appName": "ExpenseTracker",
+  "webDir": "dist",
+  "server": {
+    "url": "https://expense-tracker-mayank.vercel.app",
+    "cleartext": false
+  }
+}
