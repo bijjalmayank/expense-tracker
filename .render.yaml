@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: expense-tracker-backend
+    env: node
+    repo: https://github.com/<your-org>/<your-backend-repo>
+    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    envVars:
+      - key: MONGO_URI
+        from: secret
+      - key: JWT_SECRET
+        from: secret
+      - key: CLIENT_URL
+        value: https://your-frontend-url
+      - key: NODE_ENV
+        value: production
