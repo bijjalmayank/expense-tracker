@@ -162,7 +162,7 @@ export const forgotPassword = async (req, res) => {
         user.resetOTP = otp;
         user.resetOTPExpires = new Date(Date.now() + 15 * 60 * 1000);
         await user.save();
-        console.log("BREVO KEY PRESENT:", !!process.env.BREVO_API_KEY);
+        // console.log("BREVO KEY PRESENT:", !!process.env.BREVO_API_KEY);
         // Send email via Brevo (background)
         await axios.post(
             "https://api.brevo.com/v3/smtp/email",
